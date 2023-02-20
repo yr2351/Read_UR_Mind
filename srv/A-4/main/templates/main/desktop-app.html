@@ -1,0 +1,262 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/Feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
+
+    <!-- Map -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+    
+    <!-- awsome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Read UR Mind</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+
+    <!-- NAVBAR ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="../main">
+          <img src="{% static 'assets/img/logo.png' %}" class="navbar-brand-img" alt="Read UR Mind">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/main" aria-haspopup="true" aria-expanded="false">
+                Main
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/introduction" aria-haspopup="true" aria-expanded="false">
+                Services
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/team" aria-haspopup="true" aria-expanded="false">
+                Team
+                </a>
+            </li>
+          </ul>
+
+          <!-- Button -->
+          <a class="navbar-btn btn btn-sm btn-outline-secondary lift ml-auto" href="https://github.com/wjddn955/A-4_project" target="_blank">
+            Github <i class="fa fa-github"></i>
+          </a>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- 일기 입력 칸
+    ================================================== -->
+    <section class="pt-10 pt-lg-9 pb-md-14 pb-lg-15 bg-white">
+      
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6 col-lg-5">
+            
+            <!-- Badge -->
+            <span class="badge badge-pill badge-success-soft mb-3">
+              <span class="h6 text-uppercase">Service</span>
+            </span>
+
+            <!-- Heading -->
+            <h2>
+              일기를 공유해주세요, <br>
+              <span class="text-success">지금 상황에 알맞은 책을 추천드립니다</span>.
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-lg text-gray-700 mb-6">
+              분석의 정확도를 위해 이것은 지켜주세요! <br>
+              1. 5문장 이상 적어주세요. <br>
+              2. 문장 끝에 온점을 붙여서 구분해주세요.
+            </p>
+
+            <!-- List -->
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+                  
+                  <!-- Text -->
+                  <p class="text-success">
+                    감정 분석
+                  </p>
+
+                </div>
+
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+                  
+                  <p class="text-success mb-lg-0">
+                    행복 중립 불안<br>
+                    분노 슬픔
+                  </p>
+
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-6">
+
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <span class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </span>
+                  
+                  <!-- Text -->
+                  <p class="text-success">
+                    키워드 추출
+                  </p>
+
+                </div>
+
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+                  
+                  <!-- Text -->
+                  <p class="text-success mb-0">
+                    도서 추천
+                  </p>
+
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+
+          <div class="col-12 col-md-6">
+            <!-- Images -->
+            <div class="row">
+              <div class="col-6 mt-8 mr-n5" data-aos="fade-up">
+                <section>
+                  <form action="{% url 'submit' %}" method="POST">
+                    {% csrf_token %}
+                    <div>
+                      <style> textarea {border: solid 2px #42ba96; border-radius: 5px; outline-color:#108360;}</style>
+                      <textarea rows="17" cols="55" border="#1E90FF" id="diary_input" name="diary_input" placeholder="일기를 적어주세요"></textarea>
+                    </div>
+                    <div>
+                      <input class="btn btn-outline-success btn-sm" id="diary_submit" type="submit" value="제출">
+                    </div>
+                  </form>
+                </section>
+              </div>
+            </div> <!-- / .row -->
+          </div>
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="py-8 py-md-11 bg-gray-200">
+      <div class="container">
+        <div class="row" style="justify-content: center;">
+          <div>
+        
+            <!-- Brand -->
+            <img src="{% static 'assets/img/logo.png' %}" alt="..." class="footer-brand img-fluid mb-2" style="max-height: 5.5rem; margin-bottom: -1rem!important;">
+
+            <!-- Text -->
+            <p class="text-gray-700 mb-2" style="text-align : center;">
+              Read Your Mind
+            </p>
+
+          </div>
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/libs/aos/dist/aos.js' %}"></script>
+    <script src="{% static 'assets/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+    <script src="{% static 'assets/libs/countup.js/dist/countUp.min.js' %}"></script>
+    <script src="{% static 'assets/libs/dropzone/dist/min/dropzone.min.js' %}"></script>
+    <script src="{% static 'assets/libs/flickity/dist/flickity.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/flickity-fade/flickity-fade.js' %}"></script>
+    <script src="{% static 'assets/libs/highlightjs/highlight.pack.min.js' %}"></script>
+    <script src="{% static 'assets/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax-element.min.js' %}"></script>
+    <script src="{% static 'assets/libs/quill/dist/quill.min.js' %}"></script>
+    <script src="{% static 'assets/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script>
+    <script src="{% static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="{% static 'assets/js/theme.min.js' %}"></script>
+
+      
+  </body>
+</html>

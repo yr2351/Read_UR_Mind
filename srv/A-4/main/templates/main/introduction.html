@@ -1,0 +1,403 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/Feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
+
+    <!-- Map -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+    
+    <!-- awsome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Read UR Mind</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+
+    <!-- NAVBAR ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="../main">
+          <img src="{% static 'assets/img/logo.png' %}" class="navbar-brand-img" alt="Read UR Mind">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/main" aria-haspopup="true" aria-expanded="false">
+                Main
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../introduction" aria-haspopup="true" aria-expanded="false">
+                Services
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/team" aria-haspopup="true" aria-expanded="false">
+                Team
+                </a>
+            </li>
+          </ul>
+
+          <!-- Button -->
+          <a class="navbar-btn btn btn-sm btn-outline-secondary lift ml-auto" href="https://github.com/wjddn955/A-4_project" target="_blank">
+            Github <i class="fa fa-github"></i>
+          </a>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- HEADER(서비스 개요_1)
+    ================================================== -->
+    <section class="pt-8 pt-md-11">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Heading -->
+            <h1 class="display-3 font-weight-bold text-center">
+              서비스 개요
+            </h1>
+            <!-- Divider -->
+            <hr class="hr-md mb-7" />
+            <!-- Text -->
+            <p>
+              최근 블로그, 브런치 등의 기록형 SNS가 다시 뜨기 시작하면서 SNS에 일기를 작성하는 사람들이 늘고 있다. 
+              굳이 SNS에 일기를 올리지 않더라도 자신의 일기장에 일기를 적는 사람들도 있다.
+            </p>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- SECTION(서비스 개요_일기 사진)
+    ================================================== -->
+    <section class="pt-6 pt-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <div class="form-row">
+              <div class="col-6">
+                <!-- Image -->
+                <a class="d-block mb-4" data-fancybox data-width="200" data-height="200">
+                  <img src="/static/assets/img/portfolio/일기_img1.jpeg" alt="..." class="img-fluid rounded lift lift-lg" />
+                </a>
+
+                <!-- Image -->
+                <a class="d-block lift" data-fancybox data-width="200" data-height="150">
+                  <img src="/static/assets/img/portfolio/일기_img2.jpeg" alt="..." class="img-fluid rounded lift lift-lg" />
+                </a>
+              </div>
+              <div class="col-6">
+                <!-- Image -->
+                <a class="d-block mb-4" data-fancybox data-width="200" data-height="150">
+                  <img src="/static/assets/img/portfolio/일기_img3.jpeg" alt="..." class="img-fluid rounded lift lift-lg" />
+                </a>
+
+                <!-- Image -->
+                <a class="d-block" data-fancybox data-width="200" data-height="200">
+                  <img src="/static/assets/img/portfolio/일기_img4.jpeg" alt="..." class="img-fluid rounded lift lift-lg" />
+                </a>
+              </div>
+              
+            </div>
+            <!-- / .row -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION(서비스 개요_2)
+    ================================================== -->
+    <section class="pt-6 pt-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+            <!-- Blockquote -->
+            <blockquote class="blockquote mb-7">
+              <p class="lead mb-7 text-center text-muted">
+                "일기를 단순히 기록하는 것에서 그치는 것이 아닌, 일기에서 추출된 자신의 감정을 되돌아 보고 비슷한 감정, 
+                키워드로 추천되는 도서를 읽으며 해소하는 것까지 서비스화 하여 현대인의 감정 해소에 도움을 주고자 한다."
+              </p>
+            </blockquote>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- HEADER(서비스 구조_1)
+    ================================================== -->
+    <section class="pt-8 pt-md-11">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Heading -->
+            <h1 class="display-3 font-weight-bold text-center">
+              서비스 구조
+            </h1>
+            <!-- Divider -->
+            <hr class="hr-md mb-7" />
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- SECTION(서비스 구조_서비스 구조도)
+    ================================================== -->
+    <section class="py-6 py-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Heading -->
+            <h3 class="font-weight-bold">
+              Service Architecture
+            </h3>  
+
+            <div class="form-row">
+              <div class="w-100">
+                <!-- Image -->
+                <img src="/static/assets/img/portfolio/archi_1.png" alt="..." class="img-fluid rounded lift lift-lg" />
+              </div> 
+            </div>
+
+            <!-- Text -->
+            <p class="mb-7">
+                1. 사용자가 일기를 입력하면 일기 데이터를 감정 분류 모델과 키워드 추출 모델에 입력으로 전달한다.
+                <br>
+                2-1. 감정 분류 모델에서 일기의 상위 감정 3개가 추출된다.
+                <br>
+                2-2. 키워드 추출 모델에서 일기의 상위 키워드 3개가 추출된다.
+                <br>
+                3. 2-1과 2-2의 결과(감정, 키워드)과 DB의 도서 데이터와 비교하여 비슷한 키워드와 감정을 가진 도서를 추출한다.
+                <br>
+                4. 추출한 감정, 키워드와 추천하는 도서를 페이지에 출력한다.
+            </p>            
+            <!-- / .row -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION(서비스 구조_bert모델 소개)
+    ================================================== -->
+    <section class="py-6 py-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Heading -->
+            <h3 class="font-weight-bold">
+              BERT Model
+            </h3>  
+
+            <div class="form-row">
+              <div class="w-100">
+                <!-- Image -->
+                <img src="/static/assets/img/portfolio/bert_img2.png" alt="..." class="img-fluid rounded lift lift-lg" />
+              </div> 
+            </div>
+            <!-- Caption -->
+            <figcaption class="figure-caption text-center">
+              일기의 감정을 추출하기 위한 자연어 처리 모델
+            </figcaption>
+
+            <!-- List -->
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex">
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  KcELECTRA_base
+                </p>
+              </li>
+              <li class="d-flex">
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  KcBERT_base
+                </p>
+              </li>
+              <li class="d-flex">
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  KoBERT
+                </p>
+              </li>
+              <li class="d-flex">
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  KoELECTRA
+                </p>
+              </li>
+              <li class="d-flex">
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i class="fe fe-check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  DistilKoBERT
+                </p>
+              </li>
+            </ul>
+            
+            <!-- Text -->
+            <p class="mb-7">
+              위 다섯가지 BERT계열 모델들에 대해 fine-tuning과 early-stopping을 진행하여
+              accuracy가 가장 높게 나온 모델을 선정하고자 했다.
+              Fine-tuning 과정에서 optimizer의 weight decay를 조절했을때 모델의 성능이 향상되었으며
+              가장 높은 accuracy를 보여준 KcELECTRA_base를 최종 모델로 선정하였다.
+              
+            </p>   
+            <!-- / .row -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION(서비스 구조_keybert모델 소개)
+    ================================================== -->
+    <section class="py-6 py-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Heading -->
+            <h3 class="font-weight-bold">
+              KeyBERT Model
+            </h3>  
+
+            <div class="form-row">
+              <div class="w-100">
+                <!-- Image -->
+                <img src="/static/assets/img/portfolio/keybert.png" alt="..." class="img-fluid rounded lift lift-lg" />
+              </div> 
+            </div>
+
+            <!-- Caption -->
+            <figcaption class="figure-caption text-center">
+              일기와 도서에서 키워드를 추출하기 위한 키워드 추출 모델
+            </figcaption>
+            <!-- / .row -->
+
+            <!-- Text -->
+            <p class="mb-7">
+              KeyBERT는 BERT기반의 모델로, N-gram을 위해 단어를 임베딩한다.
+              이후 cosine similarity를 계산하여 어떤 N-gram 또는 단어가 문서와 가장 유사한지 찾아낸다.
+              가장 유사한 단어들은 문서를 가장 잘 설명할 수 있는 키워드로 분류한다.
+            </p>   
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="py-8 py-md-11 bg-gray-200">
+      <div class="container">
+        <div class="row" style="justify-content: center;">
+          <div>
+        
+            <!-- Brand -->
+            <img src="{% static 'assets/img/logo.png' %}" alt="..." class="footer-brand img-fluid mb-2" style="max-height: 5.5rem; margin-bottom: -1rem!important;">
+
+            <!-- Text -->
+            <p class="text-gray-700 mb-2" style="text-align : center;">
+              Read Your Mind
+            </p>
+
+          </div>
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="./assets/libs/aos/dist/aos.js"></script>
+    <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="./assets/libs/quill/dist/quill.min.js"></script>
+    <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+
+  </body>
+</html>

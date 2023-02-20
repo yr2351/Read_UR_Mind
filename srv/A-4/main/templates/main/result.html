@@ -1,0 +1,310 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/Feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
+
+    <!-- Map -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+
+    <!-- awsome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <title>Read UR Mind</title>
+
+  </head>
+  <body class="bg-light">
+    <!-- NAVBAR ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="../main">
+            <img src="{% static 'assets/img/logo.png' %}" class="navbar-brand-img" alt="Read UR Mind">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../main" aria-haspopup="true" aria-expanded="false">
+                Main
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../introduction" aria-haspopup="true" aria-expanded="false">
+                Services
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/team" aria-haspopup="true" aria-expanded="false">
+                Team
+                </a>
+            </li>
+          </ul>
+
+          <!-- Button -->
+          <a class="navbar-btn btn btn-sm btn-outline-secondary lift ml-auto" href="https://github.com/wjddn955/A-4_project" target="_blank">
+            Github <i class="fa fa-github"></i>
+          </a>
+
+        </div>
+
+      </div>
+    </nav>
+
+
+    <!-- 내용
+    ================================================== -->
+    <section>
+        <div class="container">
+            <div class="col-12">
+                <h2>감정: {% for emotion in emotions %}
+                    {% if emotion == '행복' %}
+                    <span class="badge badge-pill badge-success">{{ emotion }}</span>
+                    {% elif emotion == '슬픔' %}
+                    <span class="badge badge-pill badge-primary">{{ emotion }}</span>
+                    {% elif emotion == '분노' %}
+                    <span class="badge badge-pill badge-danger">{{ emotion }}</span>
+                    {% elif emotion == '불안' %}
+                    <span class="badge badge-pill badge-warning">{{ emotion }}</span>
+                    {% else %}
+                    <span class="badge badge-pill badge-secondary">{{ emotion }}</span>
+                    {% endif %}
+                {% endfor %}</h2>
+                <h2>키워드:
+                    {% if check == 0 %} 
+                    {% for keyword in keywords %}
+                    <span class="badge badge-pill badge-secondary">{{ keyword }}</span>
+                    {% endfor %}
+                    {% elif check == 1 %}
+                    {% for keyword in keywords %}
+                    <span class="badge badge-pill badge-secondary">{{ keyword }}</span>
+                    {% endfor %}
+                    {% else %}
+                    <span class="badge badge-pill badge-secondary">적절한 키워드를 찾지 못했습니다.</span>               
+                    {% endif %}
+                </h2>
+            </div>
+            <div class="row">
+                <!-- 감정 추천 도서 -->
+                <div id="emotionCarousel" class="carousel slide col-12 col-md-6" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for emotion, value in emotionbooklist.items %}
+                        {% if emotion == first_emo %}
+                        <div class="carousel-item active">
+                        {% else %}
+                        <div class="carousel-item">
+                        {% endif %}
+                        {% if emotion == '행복' %}
+                        <h3> 감정에 기반한 책 <span class="badge badge-pill badge-success">{{ emotion }}</span></h3>
+                        {% elif emotion == '슬픔' %}
+                        <h3> 감정에 기반한 책 <span class="badge badge-pill badge-primary">{{ emotion }}</span></h3>
+                        {% elif emotion == '분노' %}
+                        <h3> 감정에 기반한 책 <span class="badge badge-pill badge-danger">{{ emotion }}</span></h3>
+                        {% elif emotion == '불안' %}
+                        <h3> 감정에 기반한 책 <span class="badge badge-pill badge-warning">{{ emotion }}</span></h3>
+                        {% else %}
+                        <h3> 감정에 기반한 책 <span class="badge badge-pill badge-secondary">{{ emotion }}</span></h3>
+                        {% endif %}
+                            <!-- 책 1 -->
+                            {% for v in value %}
+                            <div class="card card-row shadow-light-lg mb-3">
+                                <div class="row no-gutters">
+                                <a class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url('{{v.img}}');" href="{{v.url}}">
+                                    <!-- Image (placeholder) -->
+                                    <img src="..." alt="..." class="img-fluid d-md-none invisible">
+                                </a>
+                                <div class="col-12 col-md-6 order-md-1">
+                            
+                                    <!-- Body -->
+                                    <div class="card-body">
+                                    <blockquote class="blockquote mb-0 text-center">
+                                        
+                                        <!-- Text -->
+                                        <p class="mb-5 mb-md-2">
+                                            {{ v.title }}
+                                        </p>
+                                        <p> {{ v.author }}</p>
+
+                                        <!-- Footer -->
+                                        <footer class="blockquote-footer" style="font-size:20px;">
+                                            {{ v.keyword }}
+                                        </footer>
+                            
+                                    </blockquote>
+                                    </div>
+                            
+                                </div>
+                            
+                                </div>
+                            </div>
+                            {% endfor %}                 
+                        </div>
+                        {% endfor %}                 
+                    </div>
+
+                    <a class="carousel-control-prev" href="#emotionCarousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#emotionCarousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!-- 키워드 추천 도서 -->
+                <div id="keywordCarousel" class="carousel slide col-12 col-md-6" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for page, value in keywordsbooklist.items %}
+                        {% if page == 1 %}
+                        <div class="carousel-item active">
+                        {% else %}
+                        <div class="carousel-item">
+                        {% endif %}
+                        
+                        {% if check == 0 %} 
+                        <h3> 키워드에 기반한 책</h3>
+                        {% elif check == 1 %}
+                        <h3> 추천드리는 책 <span class="badge badge-pill badge-secondary">키워드에 해당하는 도서를 찾지 못했습니다.</span></h3>
+                        {% else %}
+                        <h3> 추천드리는 책 <span class="badge badge-pill badge-secondary">적절한 키워드를 찾지 못했습니다.</span></h3>
+                        {% endif %}
+
+                            <!-- 책 1 -->
+                            {% for v in value %}
+                            <div class="card card-row shadow-light-lg mb-3">
+                                <div class="row no-gutters">
+                                <a class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url('{{v.img}}');" href="{{v.url}}">
+                                    <!-- Image (placeholder) -->
+                                    <img src="..." alt="..." class="img-fluid d-md-none invisible">
+                                </a>
+                                <div class="col-12 col-md-6 order-md-1">
+                            
+                                    <!-- Body -->
+                                    <div class="card-body">
+                                    <blockquote class="blockquote mb-0 text-center">
+                                        
+                                        <!-- Text -->
+                                        <p class="mb-5 mb-md-2">
+                                            {{ v.title }}
+                                        </p>
+                                        <p> {{ v.author }}</p>
+
+                                        <!-- Footer -->
+                                        <footer class="blockquote-footer" style="font-size:20px;">
+                                            {{ v.keyword }}
+                                        </footer>
+                            
+                                    </blockquote>
+                                    </div>
+                            
+                                </div>
+                            
+                                </div>
+                            </div>
+                            {% endfor %}                 
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <a class="carousel-control-prev" href="#keywordCarousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#keywordCarousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="py-8 py-md-11 bg-gray-200">
+      <div class="container">
+        <div class="row" style="justify-content: center;">
+          <div>
+        
+            <!-- Brand -->
+            <img src="{% static 'assets/img/logo.png' %}" alt="..." class="footer-brand img-fluid mb-2" style="max-height: 5.5rem; margin-bottom: -1rem!important;">
+
+            <!-- Text -->
+            <p class="text-gray-700 mb-2" style="text-align : center;">
+              Read Your Mind
+            </p>
+
+          </div>
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/libs/aos/dist/aos.js' %}"></script>
+    <script src="{% static 'assets/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+    <script src="{% static 'assets/libs/countup.js/dist/countUp.min.js' %}"></script>
+    <script src="{% static 'assets/libs/dropzone/dist/min/dropzone.min.js' %}"></script>
+    <script src="{% static 'assets/libs/flickity/dist/flickity.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/flickity-fade/flickity-fade.js' %}"></script>
+    <script src="{% static 'assets/libs/highlightjs/highlight.pack.min.js' %}"></script>
+    <script src="{% static 'assets/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax-element.min.js' %}"></script>
+    <script src="{% static 'assets/libs/quill/dist/quill.min.js' %}"></script>
+    <script src="{% static 'assets/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script>
+    <script src="{% static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="{% static 'assets/js/theme.min.js' %}"></script>
+
+      
+  </body>
+</html>
