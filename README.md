@@ -12,7 +12,7 @@
 
 ## &#128101; 팀 소개
 ### A-4
-양정우 (Leader) [@widdn955](https://github.com/wjddn955)  
+양정우 (Leader) [@wjddn955](https://github.com/wjddn955)  
 김유라 [@yr2351](https://github.com/yr2351)  
 심지현 [@jihhyeon](https://github.com/jihhyeon)  
 여언주 [@eejj357](https://github.com/eejj357)  
@@ -68,13 +68,13 @@
     - <img src="https://img.shields.io/badge/Asana-273347?style=flat&logo=Asana&logoColor=white"/>
     - <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white"/>
 
-## &#127910; 발표 & 시연 영상
+## &#127910; 시연
+### 입력
 ![입력](./srv/A-4/static/assets/img/photos/시연1.png)
-△입력
+### 결과1
 ![결과1](./srv/A-4/static/assets/img/photos/시연2.png)
-△결과1
+### 결과2
 ![결과2](./srv/A-4/static/assets/img/photos/시연3.png)
-△결과2
 
 ## &#128269; References
 - [KcElectra](https://github.com/Beomi/KcELECTRA)
