@@ -1,3 +1,4 @@
 srv/A-4/final_model.pt filter=lfs diff=lfs merge=lfs -text
 srv/A-4/word/fasttext-jamo.bin filter=lfs diff=lfs merge=lfs -text
 srv/A-4/word/word.zip filter=lfs diff=lfs merge=lfs -text
+docs/Read_UR_Mind_시연.mp4 filter=lfs diff=lfs merge=lfs -text
